@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DetailsHowMuchOwe: View {
-    @AppStorage("modalPresent") var modalPresent: String = "success"
+    @AppStorage("modalPresent") var modalPresent: String = "none"
     @AppStorage("disableScreen") var disableScreen: Bool = false
     @State var arrugaDetail: SmallLoan
     

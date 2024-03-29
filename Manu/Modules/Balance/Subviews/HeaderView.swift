@@ -36,11 +36,3 @@ struct HeaderView: View {
         }.padding([.leading, .trailing], 16)
     }
 }
-
-struct HeaderView_Previews: PreviewProvider {
-    static var previews: some View {
-        ZStack {
-            HeaderView()
-        }.background(Color("primaryColor"))
-    }
-}

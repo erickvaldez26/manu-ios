@@ -84,9 +84,3 @@ struct SectionMonthlyPaymentsView: View {
             .ignoresSafeArea()
     }
 }
-
-struct SectionMonthlyPaymentsView_Previews: PreviewProvider {
-    static var previews: some View {
-        SectionMonthlyPaymentsView()
-    }
-}

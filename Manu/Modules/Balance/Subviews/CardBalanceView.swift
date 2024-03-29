@@ -42,11 +42,3 @@ struct CardBalanceView: View {
         .padding([.leading, .trailing], 16)
     }
 }
-
-struct CardBalanceView_Previews: PreviewProvider {
-    static var previews: some View {
-        ZStack {
-            CardBalanceView()
-        }.background(Color("primaryColor"))
-    }
-}

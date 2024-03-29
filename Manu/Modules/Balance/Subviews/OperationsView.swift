@@ -49,9 +49,3 @@ struct OperationsView: View {
         .padding(.horizontal, 16)
     }
 }
-
-struct OperationsView_Previews: PreviewProvider {
-    static var previews: some View {
-        OperationsView()
-    }
-}

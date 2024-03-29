@@ -24,6 +24,11 @@
 		32ADBE7D2A46A19A00040157 /* DragConfirmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADBE7C2A46A19A00040157 /* DragConfirmButton.swift */; };
 		32ADBE812A46B16A00040157 /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADBE802A46B16A00040157 /* SuccessView.swift */; };
 		32ADBE832A46B17C00040157 /* FailureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADBE822A46B17C00040157 /* FailureView.swift */; };
+		32E183822BB6045B00BC6D4A /* EnrollmentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E183812BB6045B00BC6D4A /* EnrollmentScreen.swift */; };
+		32E183842BB66DB200BC6D4A /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E183832BB66DB100BC6D4A /* RegisterScreen.swift */; };
+		32E183872BB673A700BC6D4A /* EnrollmentTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E183862BB673A700BC6D4A /* EnrollmentTopBar.swift */; };
+		32E183892BB676D700BC6D4A /* FormEnrollmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E183882BB676D700BC6D4A /* FormEnrollmentView.swift */; };
+		32E1838B2BB6785E00BC6D4A /* RegisterTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E1838A2BB6785E00BC6D4A /* RegisterTopBar.swift */; };
 		32E753EB2A3E772C0083E342 /* ManuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E753EA2A3E772C0083E342 /* ManuApp.swift */; };
 		32E753EF2A3E772E0083E342 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32E753EE2A3E772E0083E342 /* Assets.xcassets */; };
 		32E753F22A3E772E0083E342 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32E753F12A3E772E0083E342 /* Preview Assets.xcassets */; };
@@ -65,6 +70,11 @@
 		32ADBE7C2A46A19A00040157 /* DragConfirmButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragConfirmButton.swift; sourceTree = "<group>"; };
 		32ADBE802A46B16A00040157 /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
 		32ADBE822A46B17C00040157 /* FailureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailureView.swift; sourceTree = "<group>"; };
+		32E183812BB6045B00BC6D4A /* EnrollmentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentScreen.swift; sourceTree = "<group>"; };
+		32E183832BB66DB100BC6D4A /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
+		32E183862BB673A700BC6D4A /* EnrollmentTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentTopBar.swift; sourceTree = "<group>"; };
+		32E183882BB676D700BC6D4A /* FormEnrollmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormEnrollmentView.swift; sourceTree = "<group>"; };
+		32E1838A2BB6785E00BC6D4A /* RegisterTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTopBar.swift; sourceTree = "<group>"; };
 		32E753E72A3E772C0083E342 /* Manu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Manu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32E753EA2A3E772C0083E342 /* ManuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManuApp.swift; sourceTree = "<group>"; };
 		32E753EE2A3E772E0083E342 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -154,6 +164,26 @@
 			path = Subviews;
 			sourceTree = "<group>";
 		};
+		32E183802BB6043D00BC6D4A /* Enrollment */ = {
+			isa = PBXGroup;
+			children = (
+				32E183812BB6045B00BC6D4A /* EnrollmentScreen.swift */,
+				32E183832BB66DB100BC6D4A /* RegisterScreen.swift */,
+				32E183852BB672B900BC6D4A /* Subviews */,
+			);
+			path = Enrollment;
+			sourceTree = "<group>";
+		};
+		32E183852BB672B900BC6D4A /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				32E183862BB673A700BC6D4A /* EnrollmentTopBar.swift */,
+				32E183882BB676D700BC6D4A /* FormEnrollmentView.swift */,
+				32E1838A2BB6785E00BC6D4A /* RegisterTopBar.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
 		32E753DE2A3E772C0083E342 = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +228,7 @@
 		32E7540B2A3F7CE40083E342 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				32E183802BB6043D00BC6D4A /* Enrollment */,
 				32ADBE422A45588500040157 /* DetailsHowMuchOwe */,
 				32E7541A2A3FCCC00083E342 /* CalculateExpense */,
 				32E754102A3F96910083E342 /* Balance */,
@@ -353,8 +384,10 @@
 				32ADBE722A46676900040157 /* ImageByName.swift in Sources */,
 				32E7540F2A3F7D730083E342 /* MonthlyPayment.swift in Sources */,
 				32E754222A3FF69B0083E342 /* WhoDoYouOweView.swift in Sources */,
+				32E183842BB66DB200BC6D4A /* RegisterScreen.swift in Sources */,
 				32ADBE462A4559B500040157 /* SmallLoan.swift in Sources */,
 				32E754132A3F96D80083E342 /* HeaderView.swift in Sources */,
+				32E183872BB673A700BC6D4A /* EnrollmentTopBar.swift in Sources */,
 				32ADBE772A469E1800040157 /* ImageAndPersonNameView.swift in Sources */,
 				32E754242A4004E00083E342 /* CustomComponents.swift in Sources */,
 				32ADBE3F2A4551A100040157 /* CalculateSpentTopBar.swift in Sources */,
@@ -365,6 +398,7 @@
 				32428BA32A4136DF0075D47B /* Utils.swift in Sources */,
 				32ADBE7B2A46A0DA00040157 /* PaymentMethodsView.swift in Sources */,
 				32ADBE832A46B17C00040157 /* FailureView.swift in Sources */,
+				32E1838B2BB6785E00BC6D4A /* RegisterTopBar.swift in Sources */,
 				32E754022A3E82A20083E342 /* GeneralComponents.swift in Sources */,
 				32E754062A3F6EF50083E342 /* CustomTabBar.swift in Sources */,
 				32ADBE792A469F9B00040157 /* AmountInformationView.swift in Sources */,
@@ -373,6 +407,7 @@
 				32E754082A3F7CBD0083E342 /* CalculateExpenseView.swift in Sources */,
 				32ADBE752A469D8B00040157 /* DetailsHowMuchOweTopBar.swift in Sources */,
 				32E753EB2A3E772C0083E342 /* ManuApp.swift in Sources */,
+				32E183822BB6045B00BC6D4A /* EnrollmentScreen.swift in Sources */,
 				32E754042A3EC5690083E342 /* Constants.swift in Sources */,
 				32E7540A2A3F7CDC0083E342 /* BalanceView.swift in Sources */,
 				32ADBE382A452D2300040157 /* KeybaordView.swift in Sources */,
@@ -380,6 +415,7 @@
 				32ADBE412A4551F600040157 /* CardCalculateAndInfoView.swift in Sources */,
 				32E754152A3F974B0083E342 /* CardBalanceView.swift in Sources */,
 				32ADBE442A4558A700040157 /* DetailsHowMuchOwe.swift in Sources */,
+				32E183892BB676D700BC6D4A /* FormEnrollmentView.swift in Sources */,
 				32ADBE3B2A45511900040157 /* CardValidateRiskView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
