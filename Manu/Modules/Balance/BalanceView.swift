@@ -14,7 +14,7 @@ struct BalanceView: View {
             .overlay {
                 VStack {
                     HeaderView()
-                        .padding(.top, 16)
+                        .padding(.top, 4)
                     
                     CardBalanceView()
                         .padding(.top, 20)

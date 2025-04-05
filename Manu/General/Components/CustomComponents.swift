@@ -7,39 +7,58 @@
 
 import SwiftUI
 
-struct CustomTextField: View {
+struct ManuTextField: View {
     let placeholder: String
-    let isLight: Bool
-    @Binding var text: String
+    @State var text: String = ""
+    @FocusState private var isFocused: Bool
     
     var body: some View {
-        ZStack(alignment: .leading) {
-            Text(text.isEmpty ? placeholder : "")
-                .foregroundColor(isLight ? Color.white : Color.black)
-                .offset(y: self.text.isEmpty ? 0 : -25)
-                .scaleEffect(self.text.isEmpty ? 1 : 0.9)
-                .font(.system(size: 14))
-                .opacity(0.7)
-            
-            TextField("", text: $text)
-                .foregroundColor(isLight ? Color.white : Color.black)
-        }.padding()
-        .textInputAutocapitalization(.never)
-        .background(
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(isLight ? Color.white : Color.black).opacity(0.7)
-        )
-        .cornerRadius(10)
-        .padding(.horizontal)
+        TextField(placeholder, text: $text)
+            .focused($isFocused)
+            .font(.styleDefaultFont(type: .regular, size: 14))
+            .foregroundColor(Color.black)
+            .padding()
+            .textInputAutocapitalization(.never)
+            .background(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(lineWidth: 3)
+                    .stroke(isFocused ? Color("accentLightGray", bundle: nil) : Color.black)
+                    .opacity(isFocused ? 1 : 0.4)
+            )
+            .cornerRadius(10)
+            .padding(.horizontal)
+            .tint(Color("accentLightGray", bundle: nil))
+    }
+}
+
+struct ManuSecureField: View {
+    let placeholder: String
+    @State var text: String = ""
+    @FocusState private var isFocused: Bool
+    
+    var body: some View {
+        SecureField(placeholder, text: $text)
+            .focused($isFocused)
+            .font(.styleDefaultFont(type: .regular, size: 14))
+            .foregroundColor(Color.black)
+            .padding()
+            .textInputAutocapitalization(.never)
+            .background(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(lineWidth: 3)
+                    .stroke(isFocused ? Color("accentLightGray") : Color.black)
+                    .opacity(isFocused ? 1 : 0.4)
+            )
+            .cornerRadius(10)
+            .padding(.horizontal)
+            .tint(Color("accentLightGray", bundle: nil))
     }
 }
 
 struct CustomComponents_Previews: PreviewProvider {
-    @State private var text: String = ""
-    
     static var previews: some View {
         VStack {
-            CustomTextField(placeholder: "Placeholder", isLight: false, text: .constant("Hola"))
+            ManuTextField(placeholder: "Placeholder", text: "")
         }
     }
 }

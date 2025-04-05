@@ -8,12 +8,8 @@
 import Foundation
 import SwiftUI
 
-enum FontType {
+public enum FontType {
     case light, regular, medium, bold
-}
-
-extension View {
-    
 }
 
 extension Text {
@@ -32,7 +28,7 @@ extension Text {
 }
 
 extension Font {
-    func styleDefaultFont(type: FontType, size: CGFloat) -> Font {
+    public static func styleDefaultFont(type: FontType, size: CGFloat) -> Font {
         switch type {
         case .light:
             return Font.custom("MontserratAlternates-Light", size: size)
@@ -43,5 +39,19 @@ extension Font {
         case .bold:
             return Font.custom("MontserratAlternates-Bold", size: size)
         }
+    }
+}
+
+struct iOSCheckbotToggleStyle: ToggleStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        Button {
+            configuration.isOn.toggle()
+        } label: {
+            HStack {
+                Image(systemName: configuration.isOn ? "checkmark.square.fill" : "square")
+                configuration.label
+            }
+        }
+
     }
 }
