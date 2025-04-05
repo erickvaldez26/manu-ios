@@ -24,8 +24,8 @@ struct EnrollmentScreen: View {
                         .multilineTextAlignment(.center)
                     Spacer()
                         
-                    ManuTextField(placeholder: "Correo electrónico", text: $email)
-                    ManuSecureField(placeholder: "Contraseña", text: $password)
+                    ManuTextField(placeholder: "Correo electrónico", text: email)
+                    ManuSecureField(placeholder: "Contraseña", text: password)
                         
                     FormEnrollmentView()
                         

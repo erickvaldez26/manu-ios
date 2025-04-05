@@ -10,7 +10,7 @@ import SwiftUI
 struct EnrollmentTopBar: View {
     var body: some View {
         HStack {
-            Image(uiImage: UIImage(named: "AppIcon")!)
+            Image("AppIcon")
                 .resizable()
                 .frame(width: 40, height: 40)
                 .clipShape(RoundedRectangle(cornerRadius: 12))

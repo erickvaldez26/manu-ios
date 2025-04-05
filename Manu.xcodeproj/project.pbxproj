@@ -111,6 +111,103 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		326E3B3E2DA0A8F800BF5EED /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				326E3B482DA0AAD900BF5EED /* View */,
+				326E3B402DA0A90C00BF5EED /* UI */,
+				326E3B3F2DA0A90400BF5EED /* ViewModel */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		326E3B3F2DA0A90400BF5EED /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		326E3B402DA0A90C00BF5EED /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				32E183862BB673A700BC6D4A /* EnrollmentTopBar.swift */,
+				32E183882BB676D700BC6D4A /* FormEnrollmentView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		326E3B412DA0A91400BF5EED /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				326E3B452DA0AA9300BF5EED /* Repository */,
+				326E3B442DA0AA8900BF5EED /* Model */,
+				326E3B432DA0AA7D00BF5EED /* DataSource */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		326E3B422DA0A92400BF5EED /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				326E3B472DA0AAA500BF5EED /* Repository */,
+				326E3B462DA0AA9F00BF5EED /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		326E3B432DA0AA7D00BF5EED /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		326E3B442DA0AA8900BF5EED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		326E3B452DA0AA9300BF5EED /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		326E3B462DA0AA9F00BF5EED /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		326E3B472DA0AAA500BF5EED /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		326E3B482DA0AAD900BF5EED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				32E183812BB6045B00BC6D4A /* EnrollmentScreen.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		326E3B492DA0AB1A00BF5EED /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				32E183832BB66DB100BC6D4A /* RegisterScreen.swift */,
+				32E183852BB672B900BC6D4A /* Subviews */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 		32ADBE352A452D0000040157 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,9 +264,9 @@
 		32E183802BB6043D00BC6D4A /* Enrollment */ = {
 			isa = PBXGroup;
 			children = (
-				32E183812BB6045B00BC6D4A /* EnrollmentScreen.swift */,
-				32E183832BB66DB100BC6D4A /* RegisterScreen.swift */,
-				32E183852BB672B900BC6D4A /* Subviews */,
+				326E3B412DA0A91400BF5EED /* Data */,
+				326E3B422DA0A92400BF5EED /* Domain */,
+				326E3B3E2DA0A8F800BF5EED /* Presenters */,
 			);
 			path = Enrollment;
 			sourceTree = "<group>";
@@ -177,8 +274,6 @@
 		32E183852BB672B900BC6D4A /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
-				32E183862BB673A700BC6D4A /* EnrollmentTopBar.swift */,
-				32E183882BB676D700BC6D4A /* FormEnrollmentView.swift */,
 				32E1838A2BB6785E00BC6D4A /* RegisterTopBar.swift */,
 			);
 			path = Subviews;
@@ -228,6 +323,7 @@
 		32E7540B2A3F7CE40083E342 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				326E3B492DA0AB1A00BF5EED /* Register */,
 				32E183802BB6043D00BC6D4A /* Enrollment */,
 				32ADBE422A45588500040157 /* DetailsHowMuchOwe */,
 				32E7541A2A3FCCC00083E342 /* CalculateExpense */,

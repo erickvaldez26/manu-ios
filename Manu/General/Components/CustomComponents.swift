@@ -9,61 +9,56 @@ import SwiftUI
 
 struct ManuTextField: View {
     let placeholder: String
-    @State private var isFocus: Bool = false
-    @Binding var text: String
+    @State var text: String = ""
+    @FocusState private var isFocused: Bool
     
     var body: some View {
-        TextField(placeholder, text: $text, onEditingChanged: { editingChanged in
-            isFocus = true
-        })
-        .font(.styleDefaultFont(type: .regular, size: 14))
-        .foregroundColor(Color.black)
-        .padding()
-        .textInputAutocapitalization(.never)
-        .background(
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(lineWidth: 3)
-                .stroke(isFocus ? Color("accentLightGray", bundle: nil) : Color.black)
-                .opacity(isFocus ? 1 : 0.4)
-        )
-        .cornerRadius(10)
-        .padding(.horizontal)
-        .tint(Color("accentLightGray", bundle: nil))
+        TextField(placeholder, text: $text)
+            .focused($isFocused)
+            .font(.styleDefaultFont(type: .regular, size: 14))
+            .foregroundColor(Color.black)
+            .padding()
+            .textInputAutocapitalization(.never)
+            .background(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(lineWidth: 3)
+                    .stroke(isFocused ? Color("accentLightGray", bundle: nil) : Color.black)
+                    .opacity(isFocused ? 1 : 0.4)
+            )
+            .cornerRadius(10)
+            .padding(.horizontal)
+            .tint(Color("accentLightGray", bundle: nil))
     }
 }
 
 struct ManuSecureField: View {
     let placeholder: String
-    @State private var isFocus: Bool = false
-    @Binding var text: String
+    @State var text: String = ""
+    @FocusState private var isFocused: Bool
     
     var body: some View {
-        SecureField(placeholder, text: $text, onCommit: {
-            isFocus = false
-        })
-        .onTapGesture {
-            isFocus = true
-        }
-        .font(.styleDefaultFont(type: .regular, size: 14))
-        .foregroundColor(Color.black)
-        .padding()
-        .textInputAutocapitalization(.never)
-        .background(
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(lineWidth: 3)
-                .stroke(isFocus ? Color("accentLightGray") : Color.black)
-                .opacity(isFocus ? 1 : 0.4)
-        )
-        .cornerRadius(10)
-        .padding(.horizontal)
-        .tint(Color("accentLightGray"))
+        SecureField(placeholder, text: $text)
+            .focused($isFocused)
+            .font(.styleDefaultFont(type: .regular, size: 14))
+            .foregroundColor(Color.black)
+            .padding()
+            .textInputAutocapitalization(.never)
+            .background(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(lineWidth: 3)
+                    .stroke(isFocused ? Color("accentLightGray") : Color.black)
+                    .opacity(isFocused ? 1 : 0.4)
+            )
+            .cornerRadius(10)
+            .padding(.horizontal)
+            .tint(Color("accentLightGray", bundle: nil))
     }
 }
 
 struct CustomComponents_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            ManuTextField(placeholder: "Placeholder", text: .constant(""))
+            ManuTextField(placeholder: "Placeholder", text: "")
         }
     }
 }

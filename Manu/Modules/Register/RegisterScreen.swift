@@ -28,9 +28,9 @@ struct RegisterScreen: View {
                         .padding(.horizontal, 16)
                         .multilineTextAlignment(.leading)
                     
-                    ManuTextField(placeholder: "Nombre", text: $name)
-                    ManuTextField(placeholder: "Correo electrónico", text: $email)
-                    ManuSecureField(placeholder: "Contraseña", text: $password)
+                    ManuTextField(placeholder: "Nombre", text: name)
+                    ManuTextField(placeholder: "Correo electrónico", text: email)
+                    ManuSecureField(placeholder: "Contraseña", text: password)
                     
                     Spacer()
                     
