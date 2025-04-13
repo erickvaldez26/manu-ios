@@ -47,11 +47,11 @@ class AppCoordinatorImpl: AppCoordinatorProtocol {
     func build(_ screen: Screen) -> some View {
         switch screen {
         case .login:
-            LoginScreen()
+            LoginScreen().navigationBarBackButtonHidden()
         case .register:
-            RegisterScreen()
+            RegisterScreen().navigationBarBackButtonHidden()
         case .tabBar:
-            TabBarView(coordinator: TabBarCoordinator())
+            TabBarView(coordinator: TabBarCoordinator()).navigationBarBackButtonHidden()
         }
     }
     

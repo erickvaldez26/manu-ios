@@ -6,13 +6,15 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct CoordinatorView: View {
     @StateObject var appCoordinator: AppCoordinatorImpl = AppCoordinatorImpl()
+    @State var isUserAuthenticated: Bool = Auth.auth().currentUser != nil
     
     var body: some View {
         NavigationStack(path: $appCoordinator.path) {
-            appCoordinator.build(.login)
+            appCoordinator.build(isUserAuthenticated ? .tabBar : .login)
                 .navigationDestination(for: Screen.self) { screen in
                     appCoordinator.build(screen)
                 }
