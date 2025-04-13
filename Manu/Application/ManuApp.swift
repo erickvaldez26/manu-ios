@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct ManuApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    
     var body: some Scene {
         WindowGroup {
-            CustomTabBar().preferredColorScheme(.light)
+            CoordinatorView().preferredColorScheme(.light)
         }
     }
 }

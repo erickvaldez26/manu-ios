@@ -22,7 +22,7 @@ struct SectionMonthlyPaymentsView: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack(alignment: .center) {
-                Text(verbatim: Constants.HomePage().monthlyPayment)
+                Text(verbatim: Constants.StringKeys.monthlyPayment.localized())
                     .foregroundColor(.black)
                     .styleDefaultFont(type: .medium, size: 16)
                     .padding(.bottom, 14)

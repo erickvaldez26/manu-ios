@@ -54,9 +54,3 @@ struct ItemKeyButton: View {
         }
     }
 }
-
-struct KeybaordView_Previews: PreviewProvider {
-    static var previews: some View {
-        KeybaordView()
-    }
-}

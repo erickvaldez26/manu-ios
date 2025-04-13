@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct CalculateSpentTopBar: View {
-    @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject private var appCoordinator: AppCoordinatorImpl
     
     var body: some View {
         HStack(alignment: .center) {
             Button {
-                presentationMode.wrappedValue.dismiss()
+                appCoordinator.dismissFullScreenOver()
             } label: {
                 Image(systemName: "arrow.left")
                     .resizable()
