@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct RegisterTopBar: View {
-    @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject private var appCoordinator: AppCoordinatorImpl
     
     var body: some View {
         HStack(alignment: .center) {
             Button {
-                presentationMode.wrappedValue.dismiss()
+                appCoordinator.pop()
             } label: {
                 Image(systemName: "arrow.left")
                     .resizable()
@@ -22,15 +22,11 @@ struct RegisterTopBar: View {
                     .padding(.all, 10)
             }
             
-            Text(verbatim: "Regístrate")
+            Text(verbatim: Constants.StringKeys.register.localized())
                 .foregroundColor(.black)
                 .styleDefaultFont(type: .medium, size: 20)
             
             Spacer()
         }.frame(width: UIScreen.main.bounds.size.width - 32).padding(.top, 8)
     }
-}
-
-#Preview {
-    RegisterTopBar()
 }

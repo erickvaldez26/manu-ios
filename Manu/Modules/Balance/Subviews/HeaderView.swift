@@ -14,11 +14,11 @@ struct HeaderView: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text(verbatim: "\(Constants.HomePage().helloUser) \(nameUser)")
+                Text(verbatim: "\(Constants.StringKeys.helloUser.localized()) \(nameUser)")
                     .styleDefaultFont(type: .bold, size: 22)
                     .foregroundColor(.black)
                 
-                Text(verbatim: Constants.HomePage().welcomeBack)
+                Text(verbatim: Constants.StringKeys.welcomeBack.localized())
                     .styleDefaultFont(type: .light, size: 14)
                     .foregroundColor(.black)
             }

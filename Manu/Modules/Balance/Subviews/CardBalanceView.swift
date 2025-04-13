@@ -11,7 +11,7 @@ struct CardBalanceView: View {
     @State var isShowBalance = false
     var body: some View {
         VStack(alignment: .leading) {
-            Text(verbatim: Constants.HomePage().balanceTotal)
+            Text(verbatim: Constants.StringKeys.totalBalance.localized())
                 .foregroundColor(.white)
                 .styleDefaultFont(type: .medium, size: 14)
                 .padding([.horizontal], 20)

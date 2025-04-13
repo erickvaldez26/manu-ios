@@ -30,9 +30,3 @@ struct ImageByName: View {
         print(name)
     }
 }
-
-struct ImageByName_Previews: PreviewProvider {
-    static var previews: some View {
-        ImageByName(name: "Erick Valdez")
-    }
-}

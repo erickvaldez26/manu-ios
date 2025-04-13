@@ -21,7 +21,7 @@ struct OperationsView: View {
                 VStack(alignment: .center) {
                     Image(systemName: Constants.IconsName().receiveIcon)
                         .foregroundColor(.white)
-                    Text(verbatim: Constants.HomePage().receive)
+                    Text(verbatim: Constants.StringKeys.receive.localized())
                         .styleDefaultFont(type: .regular, size: 13)
                         .foregroundColor(.white)
                         .padding(.top, 8)
@@ -36,7 +36,7 @@ struct OperationsView: View {
                 VStack(alignment: .center) {
                     Image(systemName: Constants.IconsName().transferIcon)
                         .foregroundColor(.white)
-                    Text(verbatim: Constants.HomePage().transfer)
+                    Text(verbatim: Constants.StringKeys.transfer.localized())
                         .styleDefaultFont(type: .regular, size: 13)
                         .foregroundColor(.white)
                         .padding(.top, 8)

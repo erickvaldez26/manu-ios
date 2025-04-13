@@ -1,5 +1,5 @@
 //
-//  EnrollmentTopBar.swift
+// LgoinTopBar.swift
 //  Manu
 //
 //  Created by Erick Valdez on 28/03/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct EnrollmentTopBar: View {
+struct LoginTopBar: View {
     var body: some View {
         HStack {
             Image("AppIcon")
@@ -24,8 +24,4 @@ struct EnrollmentTopBar: View {
             }
         }
     }
-}
-
-#Preview {
-    EnrollmentTopBar()
 }
