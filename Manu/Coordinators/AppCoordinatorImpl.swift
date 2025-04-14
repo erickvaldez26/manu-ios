@@ -14,6 +14,10 @@ class AppCoordinatorImpl: AppCoordinatorProtocol {
     @Published var fullScreenCover: FullScreenCover?
     
     // MARK: - Navigation Functions
+    func resetToRoot() {
+        path = NavigationPath()
+    }
+    
     func push(_ screen: Screen) {
         path.append(screen)
     }

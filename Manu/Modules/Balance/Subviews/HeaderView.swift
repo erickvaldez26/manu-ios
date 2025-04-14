@@ -6,10 +6,22 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct HeaderView: View {
+    @EnvironmentObject private var appCoordinator: AppCoordinatorImpl
+    
     @State var nameUser: String = "Erick"
     @State var profileUrl: URL = URL(string: "https://shanibacreative.com/wp-content/uploads/2020/06/membuat-foto-profil-yang-bagus.jpg")!
+    
+    func signOut() {
+        do {
+            try Auth.auth().signOut()
+            appCoordinator.resetToRoot()
+        } catch let error as NSError {
+            print("MANU -> Error al cerrar sesión: %@", error)
+        }
+    }
     
     var body: some View {
         HStack {
@@ -28,11 +40,15 @@ struct HeaderView: View {
                 Image(systemName: Constants.IconsName().notification)
                     .foregroundColor(.black)
             }.padding(.trailing, 10)
-            AsyncImage(url: profileUrl) { content in
-                content.image?
-                    .resizable()
-                    .cornerRadius(25)
-            }.frame(width: 40, height: 40)
+            Button {
+                signOut()
+            } label: {
+                AsyncImage(url: profileUrl) { content in
+                    content.image?
+                        .resizable()
+                        .cornerRadius(25)
+                }.frame(width: 40, height: 40)
+            }
         }.padding([.leading, .trailing], 16)
     }
 }

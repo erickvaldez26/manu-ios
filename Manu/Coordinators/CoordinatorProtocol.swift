@@ -13,6 +13,7 @@ protocol AppCoordinatorProtocol: ObservableObject {
     var sheet: Sheet? { get set }
     var fullScreenCover: FullScreenCover? { get set }
     
+    func resetToRoot()
     func push(_ screen: Screen)
     func presentSheet(_ sheet: Sheet)
     func presentFullScreenCover(_ fullScreenCover: FullScreenCover)
