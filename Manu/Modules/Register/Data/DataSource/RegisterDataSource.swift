@@ -44,6 +44,4 @@ class RegisterDataSourceImpl: RegisterDataSource {
             }
         }.eraseToAnyPublisher()
     }
-    
-    
 }
