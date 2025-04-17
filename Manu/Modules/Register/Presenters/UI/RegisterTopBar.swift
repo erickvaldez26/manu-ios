@@ -22,7 +22,7 @@ struct RegisterTopBar: View {
                     .padding(.all, 10)
             }
             
-            Text(verbatim: Constants.StringKeys.register.localized())
+            Text(verbatim: Constants.Localized.register.apply())
                 .foregroundColor(.black)
                 .styleDefaultFont(type: .medium, size: 20)
             

@@ -25,12 +25,12 @@ struct ManuSecureField: View {
             .background(
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(lineWidth: 3)
-                    .stroke(Color("accentLightGray"))
+                    .stroke(Color.accentLightGray)
                     .opacity(isFocused ? 1 : 0.4)
             )
             .cornerRadius(10)
             .padding(.horizontal)
-            .tint(Color("accentLightGray", bundle: nil))
+            .tint(Color.accentLightGray)
     }
     
     private func bindingWithChangeHandler() -> Binding<String> {

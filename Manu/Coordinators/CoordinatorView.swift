@@ -14,7 +14,7 @@ struct CoordinatorView: View {
     
     var body: some View {
         NavigationStack(path: $appCoordinator.path) {
-            appCoordinator.build(isUserAuthenticated ? .tabBar : .login)
+            appCoordinator.build(.tabBar)
                 .navigationDestination(for: Screen.self) { screen in
                     appCoordinator.build(screen)
                 }

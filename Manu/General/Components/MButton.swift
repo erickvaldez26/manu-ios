@@ -46,7 +46,7 @@ struct MButtonStyle: ButtonStyle {
         configuration.label
             .padding()
             .background(
-                Color("accentLightGray")
+                Color.accentLightGray
             )
             .foregroundColor(.white)
             .clipShape(RoundedRectangle(cornerRadius: 10))

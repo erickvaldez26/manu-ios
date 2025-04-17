@@ -11,7 +11,7 @@ struct CardBalanceView: View {
     @State var isShowBalance = false
     var body: some View {
         VStack(alignment: .leading) {
-            Text(verbatim: Constants.StringKeys.totalBalance.localized())
+            Text(verbatim: Constants.Localized.totalBalance.apply())
                 .foregroundColor(.white)
                 .styleDefaultFont(type: .medium, size: 14)
                 .padding([.horizontal], 20)
@@ -27,7 +27,7 @@ struct CardBalanceView: View {
                 Button {
                     isShowBalance = !isShowBalance
                 } label: {
-                    Image(systemName: isShowBalance ? Constants.IconsName().hideBalance : Constants.IconsName().showBalance)
+                    Image(systemName: isShowBalance ? Constants.IconsName.hideBalance : Constants.IconsName.showBalance)
                         .foregroundColor(.white)
                 }.padding(.top, 4)
             }
