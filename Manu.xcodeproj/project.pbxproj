@@ -58,7 +58,6 @@
 		32E183822BB6045B00BC6D4A /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E183812BB6045B00BC6D4A /* LoginScreen.swift */; };
 		32E183842BB66DB200BC6D4A /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E183832BB66DB100BC6D4A /* RegisterScreen.swift */; };
 		32E183872BB673A700BC6D4A /* LoginTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E183862BB673A700BC6D4A /* LoginTopBar.swift */; };
-		32E183892BB676D700BC6D4A /* FormLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E183882BB676D700BC6D4A /* FormLoginView.swift */; };
 		32E1838B2BB6785E00BC6D4A /* RegisterTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E1838A2BB6785E00BC6D4A /* RegisterTopBar.swift */; };
 		32E753EB2A3E772C0083E342 /* ManuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E753EA2A3E772C0083E342 /* ManuApp.swift */; };
 		32E753EF2A3E772E0083E342 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32E753EE2A3E772E0083E342 /* Assets.xcassets */; };
@@ -126,7 +125,6 @@
 		32E183812BB6045B00BC6D4A /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		32E183832BB66DB100BC6D4A /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		32E183862BB673A700BC6D4A /* LoginTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTopBar.swift; sourceTree = "<group>"; };
-		32E183882BB676D700BC6D4A /* FormLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormLoginView.swift; sourceTree = "<group>"; };
 		32E1838A2BB6785E00BC6D4A /* RegisterTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTopBar.swift; sourceTree = "<group>"; };
 		32E753E72A3E772C0083E342 /* Manu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Manu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32E753EA2A3E772C0083E342 /* ManuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManuApp.swift; sourceTree = "<group>"; };
@@ -165,12 +163,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		323AB9762DB179C000A624E4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				32428BA22A4136DF0075D47B /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		326E3B3E2DA0A8F800BF5EED /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				326E3B3F2DA0A90400BF5EED /* ViewModel */,
 				326E3B482DA0AAD900BF5EED /* View */,
 				326E3B402DA0A90C00BF5EED /* UI */,
-				326E3B3F2DA0A90400BF5EED /* ViewModel */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -187,7 +193,6 @@
 			isa = PBXGroup;
 			children = (
 				32E183862BB673A700BC6D4A /* LoginTopBar.swift */,
-				32E183882BB676D700BC6D4A /* FormLoginView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -516,7 +521,7 @@
 				32ADBE362A452D0800040157 /* Constants */,
 				32ADBE352A452D0000040157 /* Components */,
 				32E7540D2A3F7D510083E342 /* GenericModels */,
-				32428BA22A4136DF0075D47B /* Utils.swift */,
+				323AB9762DB179C000A624E4 /* Utils */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -703,7 +708,6 @@
 				32ADBE412A4551F600040157 /* CardCalculateAndInfoView.swift in Sources */,
 				32E754152A3F974B0083E342 /* CardBalanceView.swift in Sources */,
 				32ADBE442A4558A700040157 /* DetailsHowMuchOwe.swift in Sources */,
-				32E183892BB676D700BC6D4A /* FormLoginView.swift in Sources */,
 				32ADBE3B2A45511900040157 /* CardValidateRiskView.swift in Sources */,
 				32AC362F2DA1BDAE00CD50D3 /* AppCoordinatorImpl.swift in Sources */,
 				323AB96F2DACA89B00A624E4 /* LoginDataSource.swift in Sources */,
