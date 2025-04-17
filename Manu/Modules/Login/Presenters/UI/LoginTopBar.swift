@@ -10,16 +10,16 @@ import SwiftUI
 struct LoginTopBar: View {
     var body: some View {
         HStack {
-            Image("AppIcon")
+            Image(Constants.IconsName.resourceAppIcon)
                 .resizable()
-                .frame(width: 40, height: 40)
-                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .frame(width: 24, height: 24)
+                .clipShape(RoundedRectangle(cornerRadius: 6))
             
             Group {
-                Text(verbatim: "Manu ")
+                Text(Constants.Localized.appName.apply())
                     .styleDefaultFont(type: .bold, size: 20) +
                 
-                Text(verbatim: "\(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String)")
+                Text("\(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String)")
                     .styleDefaultFont(type: .regular, size: 10)
             }
         }

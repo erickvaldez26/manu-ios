@@ -7,22 +7,37 @@
 
 import SwiftUI
 
+public enum MButtonState {
+    case enabled
+    case disabled
+    case loading
+}
+
 struct MButton: View {
     var title: String
     var action: () -> Void
-    var isEnabled: Bool
+    var state: MButtonState
     
     var body: some View {
-        Button(action: action) {
-            Text(verbatim: title)
-                .styleDefaultFont(type: .regular, size: 16)
-                .foregroundStyle(isEnabled ? Color.white : Color.white.opacity(0.7))
-                .frame(maxWidth: .infinity)
-                
+        Button(action: {
+            if self.state == .enabled {
+                action()
+            }
+        }) {
+            if state == .loading {
+                ProgressView()
+                    .tint(Color.white)
+                    .frame(maxWidth: .infinity)
+            } else {
+                Text(verbatim: title)
+                    .styleDefaultFont(type: .regular, size: 16)
+                    .foregroundStyle(state == .enabled ? Color.white : Color.white.opacity(0.7))
+                    .frame(maxWidth: .infinity)
+            }
         }
         .buttonStyle(MButtonStyle())
-        .disabled(!isEnabled)
-        .opacity(isEnabled ? 1.0 : 0.8)
+        .disabled(state == .disabled || state == .loading)
+        .opacity(state == .enabled ? 1.0 : 0.8)
     }
 }
 
@@ -31,7 +46,7 @@ struct MButtonStyle: ButtonStyle {
         configuration.label
             .padding()
             .background(
-                Color("accentLightGray")
+                Color.accentLightGray
             )
             .foregroundColor(.white)
             .clipShape(RoundedRectangle(cornerRadius: 10))
@@ -40,5 +55,9 @@ struct MButtonStyle: ButtonStyle {
 }
 
 #Preview {
-    MButton(title: "MButton", action: {}, isEnabled: false)
+    VStack(spacing: 18) {
+        MButton(title: "MButton", action: {}, state: .disabled)
+        MButton(title: "MButton", action: {}, state: .enabled)
+        MButton(title: "MButton", action: {}, state: .loading)
+    }.padding()
 }
