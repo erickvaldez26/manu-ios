@@ -18,7 +18,7 @@ struct RegisterScreen: View {
     )
 
     var body: some View {
-        Color(uiColor: UIColor(named: "primaryColor")!)
+        Color.primaryColor
             .ignoresSafeArea()
             .overlay {
                 VStack(alignment: .leading) {
@@ -35,10 +35,7 @@ struct RegisterScreen: View {
                             .multilineTextAlignment(.leading)
                             .frame(height: 65)
                     } else {
-                        Text(
-                            verbatim:
-                                "Por favor, ingresa tu nombre, correo electrónico\ny contraseña para registrarte."
-                        )
+                        Text(Constants.Localized.descriptionRegisterScreen.apply())
                         .styleDefaultFont(type: .regular, size: 14)
                         .foregroundStyle(.black)
                         .padding(.top, 4)
@@ -48,16 +45,16 @@ struct RegisterScreen: View {
                         .frame(height: 65)
                     }
 
-                    ManuTextField(placeholder: "Nombre", text: $viewModel.name) { _ in
+                    ManuTextField(placeholder: Constants.Localized.name.apply(), text: $viewModel.name) { _ in
                         viewModel.validateName()
                     }
                     ManuTextField(
-                        placeholder: "Correo electrónico", keyboardType: .emailAddress,
+                        placeholder: Constants.Localized.email.apply(), keyboardType: .emailAddress,
                         text: $viewModel.email
                     ) { _ in
                         viewModel.validateEmail()
                     }
-                    ManuSecureField(placeholder: "Contraseña", text: $viewModel.password) { _ in
+                    ManuSecureField(placeholder: Constants.Localized.password.apply(), text: $viewModel.password) { _ in
                         viewModel.validatePassword()
                     }
 
@@ -66,12 +63,12 @@ struct RegisterScreen: View {
                     HStack {
                         Toggle(isOn: $viewModel.isAcceptTermConditions, label: {})
                             .toggleStyle(iOSCheckbotToggleStyle())
-                            .foregroundStyle(Color("lightGray"))
+                            .foregroundStyle(Color.lightGray)
 
                         Group {
-                            Text(verbatim: "He leído y acepto la ")
+                            Text(Constants.Localized.termConditionsPartOne.apply())
                                 .styleDefaultFont(type: .regular, size: 14)
-                                + Text(verbatim: "Política de privacidad")
+                            + Text(Constants.Localized.termConditionsPartTwo.apply())
                                 .styleDefaultFont(type: .bold, size: 14)
                         }
                     }
@@ -79,7 +76,7 @@ struct RegisterScreen: View {
                     .padding(.vertical, 10)
 
                     MButton(
-                        title: "Confirmar",
+                        title: Constants.Localized.confirm.apply(),
                         action: {
                             viewModel.register()
                         }, state: viewModel.isFormValid ? .enabled : .disabled

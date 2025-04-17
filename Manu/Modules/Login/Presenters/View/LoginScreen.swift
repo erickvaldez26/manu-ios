@@ -18,14 +18,14 @@ struct LoginScreen: View {
     )
     
     var body: some View {
-        Color(uiColor: UIColor(named: "primaryColor")!)
+        Color.primaryColor
             .ignoresSafeArea()
             .overlay {
                 VStack {
                     LoginTopBar()
                     
                     Spacer()
-                    Text(verbatim: "Controla tus gatos,\ncontrola tu vida")
+                    Text(Constants.Localized.titleLoginScreen.apply())
                         .styleDefaultFont(type: .bold, size: 22)
                         .multilineTextAlignment(.center)
                     Spacer()
@@ -40,7 +40,7 @@ struct LoginScreen: View {
                             .multilineTextAlignment(.leading)
                             .frame(height: 65)
                     } else {
-                        Text(verbatim: "")
+                        Text(verbatim: .empty)
                         .styleDefaultFont(type: .regular, size: 14)
                         .foregroundStyle(.black)
                         .padding(.top, 4)
@@ -50,37 +50,37 @@ struct LoginScreen: View {
                         .frame(height: 65)
                     }
                     
-                    ManuTextField(placeholder: "Correo electrónico", keyboardType: .emailAddress, text: $viewModel.email) { _ in
+                    ManuTextField(placeholder: Constants.Localized.email.apply(), keyboardType: .emailAddress, text: $viewModel.email) { _ in
                         viewModel.validateEmail()
                     }.disabled(viewModel.isLoading)
-                    ManuSecureField(placeholder: "Contraseña", text: $viewModel.password) { _ in
+                    ManuSecureField(placeholder: Constants.Localized.password.apply(), text: $viewModel.password) { _ in
                         viewModel.validatePassword()
                     }.disabled(viewModel.isLoading)
                     
                     HStack(alignment: .center, spacing: 10) {
                         Button(action: {}, label: {
-                            Image(systemName: "faceid")
+                            Image(systemName: Constants.IconsName.faceId)
                                 .resizable()
                                 .frame(width: 30, height: 30)
-                                .foregroundStyle(Color("lightGray"))
+                                .foregroundStyle(Color.lightGray)
                         })
                         
-                        MButton(title: "Ingresar", action: {
+                        MButton(title: Constants.Localized.join.apply(), action: {
                             viewModel.login()
                         }, state: viewModel.isLoading ? .loading : viewModel.isFormValid)
                         .frame(width: (UIScreen.main.bounds.width - 32) - 44, height: 50)
                     }
                     
                     HStack {
-                        Text(verbatim: "Aún no te registraste?")
+                        Text(verbatim: Constants.Localized.haveDontRegistered.apply())
                             .styleDefaultFont(type: .regular, size: 14)
                         
                         Button {
                             appCoordinator.push(.register)
                         } label: {
-                            Text(verbatim: "Regístrate aqui")
+                            Text(verbatim: Constants.Localized.registerHere.apply())
                                 .styleDefaultFont(type: .bold, size: 14)
-                                .foregroundColor(Color("accentLightGray"))
+                                .foregroundColor(Color.accentLightGray)
                         }.disabled(viewModel.isLoading)
                     }.padding(.vertical, 26)
                 }.onReceive(viewModel.$loginSuccess) { success in

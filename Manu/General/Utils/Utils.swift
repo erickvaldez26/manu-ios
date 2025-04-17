@@ -80,6 +80,10 @@ struct iOSCheckbotToggleStyle: ToggleStyle {
 }
 
 extension String {
+    static let empty = ""
+    static let space = " "
+    static let doubleSpace = "  "
+    
     func containsNumbersAndSymbols() -> Bool {
         let numbersPattern = ".*[0-9].*" // Verifica si hay al menos un número
         let symbolsPattern = ".*[^a-zA-Z0-9].*" // Verifica si hay al menos un símbolo
@@ -117,7 +121,7 @@ extension String {
 }
 
 extension StaticString {
-    func localized() -> String {
+    func apply() -> String {
         return String(localized: self, defaultValue: "Not found string")
     }
 }

@@ -9,10 +9,12 @@ import Foundation
 
 extension Constants {
     struct IconsName {
-        let notification: String = "bell"
-        let showBalance: String = "eye.fill"
-        let hideBalance: String = "eye.slash.fill"
-        let receiveIcon: String = "arrow.uturn.down"
-        let transferIcon: String = "arrow.uturn.up"
+        static let resourceAppIcon: String = "resource_app_icon"
+        static let notification: String = "bell"
+        static let showBalance: String = "eye.fill"
+        static let hideBalance: String = "eye.slash.fill"
+        static let receiveIcon: String = "arrow.uturn.down"
+        static let transferIcon: String = "arrow.uturn.up"
+        static let faceId: String = "faceid"
     }
 }
