@@ -19,9 +19,9 @@ struct OperationsView: View {
                 disableScreen = true
             } label: {
                 VStack(alignment: .center) {
-                    Image(systemName: Constants.IconsName().receiveIcon)
+                    Image(systemName: Constants.IconsName.receiveIcon)
                         .foregroundColor(.white)
-                    Text(verbatim: Constants.StringKeys.receive.localized())
+                    Text(verbatim: Constants.Localized.receive.apply())
                         .styleDefaultFont(type: .regular, size: 13)
                         .foregroundColor(.white)
                         .padding(.top, 8)
@@ -34,9 +34,9 @@ struct OperationsView: View {
                 print("Transferir")
             } label: {
                 VStack(alignment: .center) {
-                    Image(systemName: Constants.IconsName().transferIcon)
+                    Image(systemName: Constants.IconsName.transferIcon)
                         .foregroundColor(.white)
-                    Text(verbatim: Constants.StringKeys.transfer.localized())
+                    Text(verbatim: Constants.Localized.transfer.apply())
                         .styleDefaultFont(type: .regular, size: 13)
                         .foregroundColor(.white)
                         .padding(.top, 8)

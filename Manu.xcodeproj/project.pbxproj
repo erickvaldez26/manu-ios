@@ -13,6 +13,7 @@
 		323AB9712DACA8A700A624E4 /* LoginRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323AB9702DACA89E00A624E4 /* LoginRepositoryProtocol.swift */; };
 		323AB9732DACAC9C00A624E4 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323AB9722DACAC7C00A624E4 /* LoginRepository.swift */; };
 		323AB9752DACACCE00A624E4 /* LoginUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323AB9742DACACC500A624E4 /* LoginUseCases.swift */; };
+		323AB97E2DB1A97C00A624E4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323AB97D2DB1A97200A624E4 /* Colors.swift */; };
 		32428BA32A4136DF0075D47B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32428BA22A4136DF0075D47B /* Utils.swift */; };
 		3296CBF52DA0B77600BCD26D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3296CBF42DA0B77600BCD26D /* FirebaseAuth */; };
 		3296CBF72DA0B77600BCD26D /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 3296CBF62DA0B77600BCD26D /* FirebaseCore */; };
@@ -85,6 +86,7 @@
 		323AB9702DACA89E00A624E4 /* LoginRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepositoryProtocol.swift; sourceTree = "<group>"; };
 		323AB9722DACAC7C00A624E4 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
 		323AB9742DACACC500A624E4 /* LoginUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCases.swift; sourceTree = "<group>"; };
+		323AB97D2DB1A97200A624E4 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		32428BA22A4136DF0075D47B /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		3296CC012DA0BE2D00BCD26D /* Constants+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+String.swift"; sourceTree = "<group>"; };
 		3296CC052DA0BEEA00BCD26D /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 		323AB9762DB179C000A624E4 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				323AB97D2DB1A97200A624E4 /* Colors.swift */,
 				32428BA22A4136DF0075D47B /* Utils.swift */,
 			);
 			path = Utils;
@@ -481,7 +484,6 @@
 		32E753E92A3E772C0083E342 /* Manu */ = {
 			isa = PBXGroup;
 			children = (
-				32AC36372DA2F48A00CD50D3 /* Application */,
 				32E7540C2A3F7D070083E342 /* General */,
 				32AC361E2DA1867700CD50D3 /* Coordinators */,
 				32E7540B2A3F7CE40083E342 /* Modules */,
@@ -522,6 +524,7 @@
 				32ADBE352A452D0000040157 /* Components */,
 				32E7540D2A3F7D510083E342 /* GenericModels */,
 				323AB9762DB179C000A624E4 /* Utils */,
+				32AC36372DA2F48A00CD50D3 /* Application */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -674,6 +677,7 @@
 				32E183872BB673A700BC6D4A /* LoginTopBar.swift in Sources */,
 				32ADBE772A469E1800040157 /* ImageAndPersonNameView.swift in Sources */,
 				32ADBE3F2A4551A100040157 /* CalculateSpentTopBar.swift in Sources */,
+				323AB97E2DB1A97C00A624E4 /* Colors.swift in Sources */,
 				32ADBE482A455A9300040157 /* Loan.swift in Sources */,
 				323AB9712DACA8A700A624E4 /* LoginRepositoryProtocol.swift in Sources */,
 				32E754192A3F98090083E342 /* SectionMonthlyPaymentsView.swift in Sources */,
